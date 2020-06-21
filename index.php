@@ -4,7 +4,18 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Автосалон</title>
-  <link rel="stylesheet" href="styles/style.css" type="text/css" />
+
+  <?php 
+        if (isset($_GET['carname'])) {
+            echo "<link rel=\"stylesheet\" href=\"styles/cars.css\" type=\"text/css\" />";
+        } else if (isset($_GET['info'])) {
+            echo "<link rel=\"stylesheet\" href=\"styles/about_us_style.css\" type=\"text/css\" />";
+        } else {
+            echo "<link rel=\"stylesheet\" href=\"styles/style.css\" type=\"text/css\" />";
+        }
+
+    ?>
+
   <link rel="shortcut icon" href="img/car.ico" type="image/x-icon">
 </head>
 
