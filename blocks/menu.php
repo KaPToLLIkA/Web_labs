@@ -1,25 +1,14 @@
-
-
-<?php
-$car_array = array(
-    "audi" => "AUDI",
-    "bmw" => "BMW",
-    "ford" => "FORD")
-
-?>
-
 <div class="left">
     <div id="left-menu">
         <div class="block-nad-menu"></div>
             <div class="block-menu">
                 <ul>
                 <?php
-                foreach ($car_array as $urr => $name)
-                {
-                    echo "<li><a href=\"../index.php?carname=$urr\">
-                    <img src=\"../img/$urr.png\" width=\"15\" height=\"15\" alt=\"Пример\"> $name</a>";
-                
-                    
+                $query = "SELECT id, manufacturer, icon_ref FROM manufacturer;";
+                $res = mysqli_query($mysql, $query);
+                while ($row = mysqli_fetch_row($res)) {
+                    echo "<li><a href=\"../index.php?carid={$row[0]}\">
+                    <img src=\"{$row[2]}\" width=\"15\" height=\"15\" alt=\"Пример\"> {$row[1]}</a>";
                 }
                 ?>
                 </ul>

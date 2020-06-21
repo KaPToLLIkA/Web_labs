@@ -6,7 +6,7 @@
   <title>Автосалон</title>
 
   <?php 
-        if (isset($_GET['carname'])) {
+        if (isset($_GET['carid'])) {
             echo "<link rel=\"stylesheet\" href=\"styles/cars.css\" type=\"text/css\" />";
         } else if (isset($_GET['info'])) {
             echo "<link rel=\"stylesheet\" href=\"styles/about_us_style.css\" type=\"text/css\" />";
@@ -20,13 +20,17 @@
 </head>
 
 <body>
-    
+    <?
+        include ("config.php");
+    ?>
+
+
     <?php include ("blocks/head.php");?>
 
         <div id="content">
         <?php 
-        if (isset($_GET['carname'])) {
-            include ("content/cars.php");
+        if (isset($_GET['carid'])) {
+            include ("cars.php");
         } else if (isset($_GET['info'])) {
             $info = $_GET['info'];
         } else {
