@@ -23,9 +23,9 @@
             
             foreach($cars as $car) {
                 echo "<figure>
-                    <img src=\"../img/{$car["img"]}\" width=\"50%\" height=\"50%\"  /></a>
+                    <img src=\"../img/{$car["img"]}\" width=\"50%\" height=\"50%\"  />
                     <figcaption>{$car["text"]}</figcaption>
-                </figure>";
+                </figure>\n";
 
 
             }
