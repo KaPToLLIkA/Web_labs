@@ -1,3 +1,13 @@
+<?
+session_start();
+if(isset($_GET['act'])) {
+    if(strcmp($_GET['act'], "logout") == 0) {
+        include ("backend/logout.php");
+        header("Location: index.php");
+    }
+}
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 
@@ -24,8 +34,14 @@
 <body>
     <?
         include ("config.php");
-    ?>
 
+        if(isset($_GET['act'])) {
+            if(strcmp($_GET['act'], "logout") == 0) {
+                include ("backend/logout.php");
+            }
+        }
+    ?>
+    
 
     <?php include ("blocks/head.php");?>
 
@@ -47,6 +63,10 @@
             break;
             case "register":
                 include ("forms/register.php");
+            break;
+            case "logout":
+                
+                include ("forms/login.php");
             break;
             }
 

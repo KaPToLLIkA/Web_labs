@@ -8,8 +8,14 @@
         
         <div>
             <label for="email">Почта</label>
+            <?
+            if(isset($_SESSION["email"])) {
 
-            <input type="email" name="email" required>
+                echo "<input type=\"email\" name=\"email\" value=\"{$_SESSION["email"]}\" required>";
+            } else {
+                echo "<input type=\"email\" name=\"email\" required>";
+            }
+            ?>
         </div>
 
         <div>

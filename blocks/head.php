@@ -12,8 +12,31 @@
     <div id="menu-top">
         <div class="bg-1">
             <ul>
-            <li><a href="../index.php?act=login">Войти</a></li>
-            <li><a href="../index.php?act=register">Регистрация</a></li>
+            <?
+                
+                if (isset($_SESSION["auth"])) {
+                    $authorized = $_SESSION["auth"];
+                    if ($authorized) {
+                        
+                        if(isset($_SESSION['email'])) {
+                            echo "<li><a href=\"../index.php?act=office\">{$_SESSION['email']}</a></li>";
+                        } else {
+                            echo "<li><a href=\"../index.php?act=office\">Профиль</a></li>";
+                        }
+                        
+                        echo "<li><a href=\"../index.php?act=logout\">Выйти</a></li>";
+                    } else {
+                        echo "<li><a href=\"../index.php?act=login\">Войти</a></li>
+                        <li><a href=\"../index.php?act=register\">Регистрация</a></li>";
+                    }
+                } else {
+                    echo "<li><a href=\"../index.php?act=login\">Войти</a></li>
+                    <li><a href=\"../index.php?act=register\">Регистрация</a></li>";
+                }
+            
+            ?>
+
+            
             <li><a href="../index.php?info=about">О нас</a></li>
             <li><a href="../index.php">Перечень автомобилей</a></li>
             <li class="none-bg"><a href="../index.php?info=contacts">Контактная информация</a></li>
