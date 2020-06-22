@@ -6,8 +6,15 @@
 }
 
 .right img {
-  border: 1px solid #55c5e9;
   width: 100%;
+}
+
+.right img[src="img/84380.png"] {
+	width: 20%;
+}
+
+.right img[src="img/trash.jpg"] {
+	width: 20%;
 }
 
 .right figcaption {

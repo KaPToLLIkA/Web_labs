@@ -12,6 +12,8 @@
     <div id="menu-top">
         <div class="bg-1">
             <ul>
+            <li><a href="../index.php?act=login">Войти</a></li>
+            <li><a href="../index.php?act=register">Регистрация</a></li>
             <li><a href="../index.php?info=about">О нас</a></li>
             <li><a href="../index.php">Перечень автомобилей</a></li>
             <li class="none-bg"><a href="../index.php?info=contacts">Контактная информация</a></li>
