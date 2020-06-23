@@ -32,6 +32,8 @@ if(isset($_GET['act'])) {
 </head>
 
 <body>
+
+
     <?
         include ("config.php");
 
@@ -91,7 +93,9 @@ if(isset($_GET['act'])) {
             
             
             if (strcasecmp($info, "about") == 0) {
+                
                 include ("content/about.php");
+
             } else if (strcasecmp($info, "contacts") == 0) {
                 include ("content/contacts.php");
             } else {
@@ -105,7 +109,9 @@ if(isset($_GET['act'])) {
          
             <!-- Подвал -->
             <?php include ("blocks/footer.php");?>
-         
+        
         </div>
+        
+    
 </body>
 </html>
