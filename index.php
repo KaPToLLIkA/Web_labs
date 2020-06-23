@@ -29,6 +29,7 @@ if(isset($_GET['act'])) {
     <link rel="stylesheet" href="styles/formstyle.css" type="text/css" />
 
   <link rel="shortcut icon" href="img/car.ico" type="image/x-icon">
+  <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 
 <body>
