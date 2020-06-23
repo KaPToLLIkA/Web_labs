@@ -7,7 +7,7 @@ setInterval(function () { getCountdown(); }, 1000);
 function getCountdown(){
     var countdown = document.getElementById("newYearTimer");
     var target_date = new  Date(2021, 0, 1); //2021 January 1 00:00:00
-    var d, h, m, s; 
+    var d, h, m, s;
     
     var current_date = new Date().getTime();
     var seconds_left = (target_date - current_date) / 1000;

@@ -43,3 +43,25 @@ button {
     outline: none;
     text-transform: uppercase;
 }
+
+.button-navigate {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: dimgrey;
+    color: white;
+    font-size: 12px;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.button-navigate:hover {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #2F4F4F;
+    color: white;
+    font-size: 12px;
+    outline: none;
+    text-transform: uppercase;
+}

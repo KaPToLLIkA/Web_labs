@@ -55,7 +55,7 @@
             $res = mysqli_query($mysql, $query);
             
             while($row = mysqli_fetch_row($res)) {
-                echo "<figure>
+                echo "<figure class=\"car-figure\">
                 <img src=\"{$row[1]}\"/>
                 <figcaption>
                     {$row[0]}
@@ -77,5 +77,21 @@
             }
             
         ?>
+        <table>
+            <tr>
+                <td><button class="button-navigate" id="button-navigate-left"><<</button></td>
+                <td><button class="button-navigate" id="button-navigate-leftone"><</button></td>
+                <td><div id="navigation">
+                <td><button class="button-navigate" id="button-navigate-1" value="1">1</button></td>
+                <td><button class="button-navigate" id="button-navigate-2" value="2">2</button></td>
+                <td><button class="button-navigate" id="button-navigate-3" value="3">3</button></td>
+                <td><button class="button-navigate" id="button-navigate-4" value="4">4</button></td>
+                <td><button class="button-navigate" id="button-navigate-5" value="5">5</button></td>
+                </div></td>
+                <td><button class="button-navigate" id="button-navigate-rightone">></button></td>
+                <td><button class="button-navigate" id="button-navigate-right">>></button></td>
+            </tr>
+        </table>
+        <script src="js/page_selector.js"></script>
     </div>
 </div>

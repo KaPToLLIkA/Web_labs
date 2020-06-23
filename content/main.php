@@ -19,7 +19,7 @@
             modalOverlay = document.getElementById("modal-overlay"),
             closeButton = document.getElementById("close-button"),
             openButton = document.getElementById("open-button");
-        
+            
            
 
         closeButton.onclick = function(){
