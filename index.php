@@ -98,6 +98,11 @@ if(isset($_GET['act'])) {
                 
                 include ("forms/login.php");
             break;
+            case "office":
+                
+                include ("content/office.php");
+            break;
+
             }
 
         } else {
