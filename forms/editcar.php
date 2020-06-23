@@ -11,14 +11,15 @@
 
 
 <div class="right">
-    <form method="POST" action="../backend/editcarform.php<?echo"?manid=$man_id&carid=$car_id";?>">
+    <form method="POST" action="../index.php<?echo"?manid=$man_id&carid=$car_id";?>&act=editcar&proc=1">
         <div>
-        <label>Изменить информацию о машине</label>
+        <h1>Изменить информацию о машине</h1>
 
 
         </div>
         
         <div>
+            <br>
             <label for="desc">Описание</label>
 
             <textarea name="desc" placeholder="<?echo "$rows[0]"?>" cols="60" rows="10" required></textarea>

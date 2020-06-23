@@ -26,6 +26,11 @@ for (var index = 1; index <= curPageButtons; ++index) {
     pages[index - 1] = index;
     $("#button-navigate-" + index).click(function() {
         curPage = $(this).val();
+        if (curPage == count) {
+            $("#add_icon").css("display", "inline-block");
+        } else {
+            $("#add_icon").css("display", "none");
+        }
         setPage();
     })
     
@@ -92,26 +97,50 @@ function setPage() {
 
 $("#button-navigate-left").click(function() {
     curPage = 1;
+    if (curPage == count) {
+        $("#add_icon").css("display", "inline-block");
+    } else {
+        $("#add_icon").css("display", "none");
+    }
     setPage();
 })
 
 $("#button-navigate-right").click(function() {
     curPage = count;
+    if (curPage == count) {
+        $("#add_icon").css("display", "inline-block");
+    } else {
+        $("#add_icon").css("display", "none");
+    }
     setPage();
 })
 
 $("#button-navigate-leftone").click(function() {
     if (curPage > 1) curPage--;
+    if (curPage == count) {
+        $("#add_icon").css("display", "inline-block");
+    } else {
+        $("#add_icon").css("display", "none");
+    }
     setPage();
 })
 
 $("#button-navigate-rightone").click(function() {
     if (curPage < count) curPage++;
+    if (curPage == count) {
+        $("#add_icon").css("display", "inline-block");
+    } else {
+        $("#add_icon").css("display", "none");
+    }
     setPage();
 })
 
 
 setPage();
-
+if (curPage == count) {
+    $("#add_icon").css("display", "inline-block");
+} else {
+    $("#add_icon").css("display", "none");
+}
 
 

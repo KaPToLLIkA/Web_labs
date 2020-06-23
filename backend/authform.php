@@ -1,6 +1,5 @@
 <?
     session_start();
-    include ("../config.php");
     include ("passwordlib.php");
 
     $email = $_POST['email'];
@@ -10,6 +9,7 @@
     $query = "SELECT `password`, `role_idrole` FROM user WHERE email = '$email';";
     $res = mysqli_query($mysql, $query);
 
+    echo "<div class=\"right\">";
     if(mysqli_num_rows($res) != 0) {
         $row = mysqli_fetch_row($res);
         
@@ -18,15 +18,15 @@
 
         if(password_verify($password, $row[0])) {
             $_SESSION["auth"]=true;     
-            echo "Успешная авторизация.<br><a href=\"../index.php\">Назад.</a>";
+            echo "<h3>Успешная авторизация.<br><a href=\"../index.php\">Назад.</a></h3>";
         } else {
             $_SESSION["auth"]=false;
-            echo "Неверный пароль.<br><a href=\"../index.php?act=login\">Повторить.</a>";
+            echo "<h3>Неверный пароль.<br><a href=\"../index.php?act=login\">Повторить.</a></h3>";
         }
     } else {
         $_SESSION["auth"]=false;
-        echo "Незарегистрированный пользователь.<br><a href=\"../index.php?act=register\">Регистрация.</a>";
+        echo "<h3>Незарегистрированный пользователь.<br><a href=\"../index.php?act=register\">Регистрация.</a></h3>";
     }
     
-
+    echo "</div>";
 ?>

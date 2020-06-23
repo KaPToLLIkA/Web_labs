@@ -71,13 +71,13 @@
                 echo"</figcaption></figure>";
             }
             if($can_add_car) {
-                echo "<figure>
+                echo "<figure id=\"add_icon\">
                 <a href=\"index.php?manid={$man_id}&act=addcar\"><img src=\"img/add.png\"></a>
                 </figure>";
             }
             
         ?>
-        <table>
+        <table class="pagination">
             <tr>
                 <td><button class="button-navigate" id="button-navigate-left"><<</button></td>
                 <td><button class="button-navigate" id="button-navigate-leftone"><</button></td>

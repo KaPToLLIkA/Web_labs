@@ -1,12 +1,13 @@
 <div class="right">
-    <form method="POST" action="../backend/authform.php">
+    <form method="POST" action="../index.php?proc=1&act=login">
         <div>
-        <label>Вход</label>
+        <h1>Вход</h1>
 
 
         </div>
         
         <div>
+            <br>
             <label for="email">Почта</label>
             <?
             if(isset($_SESSION["email"])) {
@@ -19,6 +20,7 @@
         </div>
 
         <div>
+            <br>
             <label for="password">Пароль</label>
 
             <input type="password" name="password" required>

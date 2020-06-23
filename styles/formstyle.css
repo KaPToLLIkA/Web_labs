@@ -28,6 +28,7 @@ textarea:focus {
 label {
     display: block;
     font-size: 14px;
+    
     margin-bottom: 8px;
 }
 
@@ -52,7 +53,9 @@ button {
     color: white;
     font-size: 12px;
     outline: none;
+    padding: none;
     text-transform: uppercase;
+    margin: none;
 }
 
 .button-navigate:hover {
@@ -63,5 +66,13 @@ button {
     color: white;
     font-size: 12px;
     outline: none;
+    margin: none;
+    padding: none;
     text-transform: uppercase;
+}
+
+.pagination {
+	align-self: center;
+	padding-left: 20%;
+    padding-right: 20%;
 }

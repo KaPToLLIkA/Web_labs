@@ -53,19 +53,46 @@ if(isset($_GET['act'])) {
         if (isset($_GET['act'])) {
             switch($_GET['act']) {
             case "editcar":
-                include ("forms/editcar.php");
+                
+                if (isset($_GET['proc'])) {
+                    if ($_GET['proc'] == '1') {
+                        include ("backend/editcarform.php");
+                    }
+                } else {
+                    include ("forms/editcar.php");
+                }
             break;
             case "addcar":
-                include ("forms/addcar.php");
+                
+                if (isset($_GET['proc'])) {
+                    if ($_GET['proc'] == '1') {
+                        include ("backend/addcarform.php");
+                    }
+                } else {
+                    include ("forms/addcar.php");
+                }
             break;
             case "deletecar":
                 include ("backend/deletecar.php");
             break;
             case "login":
-                include ("forms/login.php");
+                
+                if (isset($_GET['proc'])) {
+                    if ($_GET['proc'] == '1') {
+                        include ("backend/authform.php");
+                    }
+                } else {
+                    include ("forms/login.php");
+                }
             break;
             case "register":
-                include ("forms/register.php");
+                if (isset($_GET['proc'])) {
+                    if ($_GET['proc'] == '1') {
+                        include ("backend/registerform.php");
+                    }
+                } else {
+                    include ("forms/register.php");
+                }
             break;
             case "logout":
                 
