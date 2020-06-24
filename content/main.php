@@ -4,8 +4,8 @@
         <script src="js/timer.js"></script>
     </div>
     <button id="open-button">Информация</button>
-    <div class="modal-overlay" id="modal-overlay"></div>
-    <div class="modal" id="modal">    
+    <div class="modal-overlay closed" id="modal-overlay"></div>
+    <div class="modal closed" id="modal">    
     <div class="modal-guts">
     <p>
         Означает конец текущего года.
