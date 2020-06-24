@@ -11,6 +11,7 @@
         </div>
 		<br>
         <div class="p2">Создатели сайта <a href="https://vk.com/spooxion">«Васильев Павел»</a>, 
+        <a href="https://vk.com/kirul69">«Андреев Кирилл»</a>, 
               <a href="https://vk.com/inc_o_g_n_ito">«Пурденко Константин»</a>
               и <a href="https://vk.com/id212076261">Марачёв Павел</a>
         </div>
